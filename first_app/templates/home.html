@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+    <h1>This is Home page</h1>
+
+    <!-- join filter  start -->
+    <h2>{{names_string | join:"-"}}</h2>
+    
+    {{names_string}}
+
+    <!-- join filter  ends -->
+
+    <!-- date filter stars here -->
+    <h1>Date demo</h1>
+    <!-- {{birthday}} -->
+    <h2>{{ birthday | date:"D d M Y" }}</h2>
+    <h2>{{ birthday|date:"SHORT_DATE_FORMAT" }}</h2>
+    <h2>{{ birthday | date }}</h2>
+
+    
+    <!-- date filter ends here -->
+
+    <!-- add filter stars here -->
+    <h1>add filter</h1>
+    
+    
+    <h2>{{ 10 | add:"10" }}</h2>
+    
+
+    <!-- add filter ends here -->
+
+    <!-- caps filter stars here
+     -->
+     <h1>Caps first filter</h1>
+     <h2>{{bari}}</h2>
+     <h2>{{ bari | capfirst }}</h2>
+
+     <!-- caps filter ends here -->
+
+     <!-- cut filter stars here
+     -->
+     <h1>Cut filter</h1>
+     <h1>{{demo}}</h1>
+     <h2> {{ demo | cut:"demo" }}</h2>
+     <!-- cut filter ends here -->
+
+
+     <!-- dictionary sort filter stars here -->
+     <h1>Dict sort</h1>
+     
+     {% for i in info %}
+     <h2>{{i}}</h2>
+     {%endfor%}
+
+     <h2>sorting values in ascedning order</h2>
+
+
+     <h2>{{ info | dictsort:"age" }}</h2>
+     <!-- dictionary sort filter ends here -->
+
+
+     <h2>sorting values in descending order</h2>
+
+
+     <h2>{{ info | dictsortreversed:"age" }}</h2>
+
+     <!-- dictionary sort filter ends here -->
+
+
+   
+     
+
+    
+
+    
+</body>
+</html>
